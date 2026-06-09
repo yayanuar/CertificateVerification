@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CertChain - Verify Certificate</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        🛡️ CertChain
+    </div>
+
+    <ul>
+        <li><a href="index.html">Verify</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+
+    <button class="issue-btn">Issue Certificate</button>
+</nav>
+
+<section class="hero">
+
+    <div class="badge">
+        ● Anchored on Blockchain
+    </div>
+
+    <h1>
+        Certificates you can
+        <span>cryptographically trust</span>
+    </h1>
+
+    <p>
+        CertChain issues digital credentials whose authenticity
+        is secured by blockchain technology.
+    </p>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="certificateID"
+            placeholder="Enter certificate ID (e.g. CERT-2026-0001)"
+        >
+
+        <button onclick="verifyCertificate()">
+            Verify
+        </button>
+
+    </div>
+
+</section>
+
+<div id="resultBox" class="certificate-card hidden">
+
+    <h2>Certificate Details</h2>
+
+    <p><strong>Name:</strong> John Doe</p>
+    <p><strong>ID:</strong> CERT-2026-0001</p>
+    <p><strong>Course:</strong> Blockchain Security</p>
+    <p><strong>Issued By:</strong> UPM</p>
+
+    <div class="verified">
+        ✓ VERIFIED
+    </div>
+
+</div>
+
+<script src="js/verify.js"></script>
+
+</body>
+</html>
